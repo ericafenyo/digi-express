@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+
+#generate output
+dist
+
+# OS generated files
+.DS_Store

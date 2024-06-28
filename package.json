@@ -1,0 +1,34 @@
+{
+  "name": "organizr",
+  "version": "0.0.1",
+  "description": "Maximise your productivity by effectively managing your tasks using organizr app.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "NODE_ENV=production tsc && node ./dist/index.js",
+    "dev": "NODE_ENV=development nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericafenyo/tp-node.git"
+  },
+  "keywords": [
+    "mongodb",
+    "express",
+    "http",
+    "docker",
+    "handlebars",
+    "typescript"
+  ],
+  "author": "Eric Afenyo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericafenyo/tp-node/issues"
+  },
+  "homepage": "https://github.com/ericafenyo/tp-node#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  }
+}
