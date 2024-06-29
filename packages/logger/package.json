@@ -1,0 +1,11 @@
+{
+  "name": "@packages/logger",
+  "version": "1.0.0",
+  "description": "A logger utility for logging messages to file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Afenyo",
+  "license": "MIT"
+}
