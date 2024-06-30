@@ -95,4 +95,4 @@ This project is an `express.js` app for creating tasks or todo list. The main in
 
 - `/`: The home page of the application
 - `/tasks`: View all tasks
-- `/task`: Add a new task
+- `/task/:id`: Edit a task
