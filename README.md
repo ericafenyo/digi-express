@@ -72,7 +72,7 @@ This project is an `express.js` app for creating tasks or todo list. The main in
 2. Navigate to the project directory:
 
     ```bash
-    cd todo-project
+    cd digi-express
     ```
 
 3. Install the dependencies:
