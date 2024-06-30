@@ -14,6 +14,14 @@ const bootstrap = async () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.static("public"));
 
+  app.use((req, res, next) => {
+    if (req.path !== "/favicon.ico") {
+      Logger.info(`${req.method} ${req.path}`);
+    }
+
+    next();
+  });
+
   // Set up handlebars as the view engine
   app.engine(
     "hbs",

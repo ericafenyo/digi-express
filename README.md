@@ -13,6 +13,12 @@ This project is an `express.js` app for creating tasks or todo list. The main in
 > - Utiliser MongoDB comme BDD (docker, cloud, local... comme vous voulez)
 > - Il faut que le site contienne au minimum 3 pages (accueil, liste des tâches, et gestion d'une tâche)
 
+## Screenshots
+
+![](./assets/screenshot-home.png)
+![](./assets/screenshot-task-list.png)
+![](./assets/screenshot-edit-task.png)
+
 ## Project Structure
 
 ```sh

@@ -13,7 +13,6 @@ export const createTask = async (req: Request, res: Response) => {
 export const getTasks = async (req: Request, res: Response) => {
   try {
     const tasks = await Task.find().lean();
-    console.log(tasks);
     res.render("tasks", { tasks });
   } catch (error: any) {
     res.status(500).json({ error: error.message });

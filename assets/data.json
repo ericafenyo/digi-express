@@ -1,0 +1,34 @@
+[
+    {
+        "_id": "6681e9bdb9cea97078fefd4c",
+        "title": "Start the day with a short walk or a quick workout",
+        "createdAt": "2024-06-30T23:26:53.881Z",
+        "updatedAt": "2024-06-30T23:43:47.488Z",
+        "__v": 0,
+        "completed": true
+    },
+    {
+        "_id": "6681e9d1b9cea97078fefd55",
+        "title": "Take a few minutes to meditate or write in a journal",
+        "createdAt": "2024-06-30T23:27:13.949Z",
+        "updatedAt": "2024-06-30T23:32:56.542Z",
+        "__v": 0,
+        "completed": true
+    },
+    {
+        "completed": false,
+        "_id": "6681e9deb9cea97078fefd58",
+        "title": "Disconnect from screens and relax before bedtime",
+        "createdAt": "2024-06-30T23:27:26.628Z",
+        "updatedAt": "2024-06-30T23:28:17.247Z",
+        "__v": 0
+    },
+    {
+        "completed": false,
+        "_id": "6681eb40b9cea97078fefd86",
+        "title": "Plan regular meals and avoid skipping them",
+        "createdAt": "2024-06-30T23:33:20.305Z",
+        "updatedAt": "2024-06-30T23:33:32.422Z",
+        "__v": 0
+    }
+]
