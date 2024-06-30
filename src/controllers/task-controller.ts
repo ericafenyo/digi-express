@@ -61,3 +61,7 @@ export const updateTask = async (req: Request, res: Response) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+export const getHome = (req: Request, res: Response) => {
+  res.render("home");
+};

@@ -6,6 +6,7 @@ import {
   createTask,
   deleteTask,
   updateTask,
+  getHome,
 } from "../controllers/task-controller";
 
 const router = Router();
@@ -13,6 +14,7 @@ const router = Router();
 // Used for rendering views using GET method
 router.get("/tasks", getTasks);
 router.get("/tasks/:id", getTask);
+router.get("/", getHome);
 
 // Used for form and data manipulations using POST method
 // We are in views routes, so we are using POST method,
