@@ -1,0 +1,29 @@
+<section class="w-[480px] mx-auto my-12">
+    <div class="container mx-auto space-y-4">
+        <div>
+            <h1 class="text-lg text-slate-600">Edit Task</h1>
+        </div>
+
+        <div>
+            <form action="/tasks/{{task._id}}/update" method="post" id="form">
+                <div class="space-y-6 border border-slate-200 p-4 rounded">
+                    <div class="space-y-2">
+                        <label class="block flex-1 text-slate-500" for="title">Title</label>
+                        <input placeholder="Edit the task title"
+                            class="outline-none text-slate-700 bg-slate-100 border border-slate-200 w-full rounded px-4 py-2"
+                            type="text" name="title" value="{{task.title}}">
+                    </div>
+                    <div class=" flex space-x-2 align-center">
+                        <input class="scale-125" id="completed" type="checkbox" name="completed" value="true" {{#if
+                            task.completed}}checked{{/if}}>
+                        <label class="text-slate-500" for="completed">Completed</label>
+                    </div>
+
+                    <button type="submit" class="py-2 bg-slate-700 text-slate-200 rounded font-semibold w-full">
+                        Update Task
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

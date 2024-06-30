@@ -3,8 +3,8 @@ import { Task } from "../database/models/task-model";
 
 export const createTask = async (req: Request, res: Response) => {
   try {
-    const task = await Task.create(req.body);
-    res.status(201).json(task);
+    await Task.create(req.body);
+    res.redirect("/tasks");
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }
@@ -12,8 +12,9 @@ export const createTask = async (req: Request, res: Response) => {
 
 export const getTasks = async (req: Request, res: Response) => {
   try {
-    const tasks = await Task.find();
-    res.status(200).json(tasks);
+    const tasks = await Task.find().lean();
+    console.log(tasks);
+    res.render("tasks", { tasks });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }
@@ -21,8 +22,23 @@ export const getTasks = async (req: Request, res: Response) => {
 
 export const getTask = async (req: Request, res: Response) => {
   try {
+    const task = await Task.findById(req.params.id).lean();
+    res.render("task", { task });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+export const deleteTask = async (req: Request, res: Response) => {
+  try {
     const task = await Task.findById(req.params.id);
-    res.status(200).json(task);
+    if (!task) {
+      res.status(204).end();
+      return;
+    }
+
+    await Task.deleteOne({ _id: task._id });
+    res.redirect("/tasks");
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }
@@ -40,22 +56,7 @@ export const updateTask = async (req: Request, res: Response) => {
     task.updatedAt = new Date();
 
     const updatedTask = await task.save();
-    res.status(200).json(updatedTask);
-  } catch (error: any) {
-    res.status(500).json({ error: error.message });
-  }
-};
-
-export const deleteTask = async (req: Request, res: Response) => {
-  try {
-    const task = await Task.findById(req.params.id);
-    if (!task) {
-      res.status(204).end();
-      return;
-    }
-
-    await Task.deleteOne({ _id: task._id });
-    res.status(204).end();
+    res.redirect("/tasks");
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }

@@ -10,9 +10,7 @@
     "strict": true,
     "skipLibCheck": true,
     "allowJs": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "./"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
