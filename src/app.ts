@@ -3,7 +3,7 @@ import express from "express";
 import { engine } from "express-handlebars";
 import { TaskRoutes } from "./routes/task-routes";
 import { ViewRoutes } from "./routes/views-routes";
-import { Logger } from "@packages/logger";
+import Logger from "@packages/logger";
 import { connect } from "./database/config";
 
 const bootstrap = async () => {

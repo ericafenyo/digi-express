@@ -4,7 +4,8 @@
   "description": "Maximise your productivity by effectively managing your tasks using organizr app.",
   "main": "app.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy-files",
+    "copy-files": "cpx \"src/**/*.{hbs,json}\" dist/ && cpx package.json dist/",
     "start": "node ./dist/app.js",
     "dev": "nodemon"
   },

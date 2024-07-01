@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Logger } from "@packages/logger";
+import Logger from "@packages/logger";
 
 export const connect = async (callback: () => void) => {
   try {

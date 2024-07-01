@@ -1,5 +1,5 @@
-import fs from "fs";
-import { Console } from "console";
+const fs = require("fs");
+const { Console } = require("console");
 
 /**
  * Create a new instance of the Console class with the
@@ -14,7 +14,7 @@ const logger = new Console({
  * Logger object to log messages to the console and to files
  * using different log severity level.
  */
-export const Logger = {
+const Logger = {
   debug: (message, ...args) => {
     const date = new Date().toISOString();
     const output = `${date} - DEBUG: ${message}`;
@@ -47,3 +47,5 @@ export const Logger = {
     logger.error(output, params);
   },
 };
+
+module.exports = Logger;

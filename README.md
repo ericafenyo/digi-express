@@ -15,9 +15,9 @@ This project is an `express.js` app for creating tasks or todo list. The main in
 
 ## Screenshots
 
-![](./assets/screenshot-home.png)
-![](./assets/screenshot-task-list.png)
-![](./assets/screenshot-edit-task.png)
+![Home page](./assets/screenshot-home.png)
+![Tasks list page](./assets/screenshot-task-list.png)
+![Edit task page](./assets/screenshot-edit-task.png)
 
 ## Project Structure
 
@@ -92,8 +92,11 @@ This project is an `express.js` app for creating tasks or todo list. The main in
 5. Start the application:
 
     ```bash
+    # For development
     npm run dev
     ```
+
+> For production: `npm run build && npm start`
 
 6. Open your browser and navigate to `http://localhost:8080/` to see the application running.
 
